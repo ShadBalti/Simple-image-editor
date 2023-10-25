@@ -5,16 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
   let fileInput = document.getElementById('file');
   let img = document.getElementById('img');
 
-  fileInput.addEventListener('change', function () {
-    if (this.files && this.files[0]) {
-      let file = this.files[0];
-      reader.onload = function (e) {
-        img.src = e.target.result;
-      };
+  if (fileInput.files.length > 0) {
+    let file = fileInput.files[0];
+
+    reader.onload = e => {
+      img.src = e.target.result;
+    };
+
+    reader.onerror = error => {
+      console.error('Error reading the file:', error);
+    };
+
+    try {
       reader.readAsDataURL(file);
+    } catch (err) {
+      console.error('Error reading the file:', err);
     }
-  });
-}
+  } else {
+    console.error('No file selected.');
+  }
+};
 
   }
 
