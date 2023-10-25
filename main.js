@@ -47,31 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add event listeners for various image adjustments
   zoom.addEventListener('input', () => {
     let valz = zoom.value;
-    img.style.filter = `brightness(${valz})`;
+    img.style.filter = `brightness(${valz} + 'px')`;
     document.getElementById('sp1').textContent = valz;
   });
 
   opacity.addEventListener('input', () => {
     let valo = opacity.value;
-    img.style.opacity = valo / 100;
+    img.style.opacity = valo / 100 + 'px';
     document.getElementById('sp2').textContent = valo;
   });
 
   blur.addEventListener('input', () => {
     let valz = blur.value;
-    img.style.filter = `blur(${valz}px)`;
+    img.style.filter = `blur(${valz}+ px)`;
     document.getElementById('spBlur').textContent = valz;
   });
 
   contrast.addEventListener('input', () => {
     let valz = contrast.value;
-    img.style.filter = `contrast(${valz})`;
+    img.style.filter = `contrast(${valz}+ px)`;
     document.getElementById('spCon').textContent = valz;
   });
 
   invert.addEventListener('input', () => {
     let valo = '0.' + invert.value;
-    img.style.filter = `invert(${valo})`;
+    img.style.filter = `invert(${valo}+ px)`;
     document.getElementById('spin').textContent = invert.value;
   });
 
