@@ -74,6 +74,15 @@ input[type="text"] {
     max-width: 200px;
     margin-top: 20px;
     border: 5px solid #007BFF;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Apply animations */
+.owner-image.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Style the "About the Owner" section */
@@ -84,16 +93,30 @@ input[type="text"] {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Apply animations */
+.owner-bio.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Style the social media buttons */
 .social-links {
     margin-top: 10px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.social-links a {
-    font-size: 18px;
+/* Apply animations */
+.social-links.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Style the selected theme */
