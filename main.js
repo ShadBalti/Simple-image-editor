@@ -98,11 +98,6 @@
         }
 
 
-
-
-
-
-
 // Add a script to apply animations when the page loads
 document.addEventListener("DOMContentLoaded", function () {
     // Get the elements to animate
@@ -115,3 +110,63 @@ document.addEventListener("DOMContentLoaded", function () {
     ownerBio.classList.add("show");
     socialLinks.classList.add("show");
 });
+
+
+// Define variables to store the editing history
+let editingHistory = [];
+let currentIndex = -1;
+
+// Function to save the current image state
+function saveState() {
+    if (currentIndex < editingHistory.length - 1) {
+        editingHistory = editingHistory.slice(0, currentIndex + 1);
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = currentImage.width;
+    canvas.height = currentImage.height;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(currentImage, 0, 0);
+    editingHistory.push(canvas.toDataURL());
+    currentIndex++;
+}
+
+// Undo function
+function undo() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        const imgData = editingHistory[currentIndex];
+        const img = new Image();
+        img.src = imgData;
+        img.onload = () => {
+            currentImage = img;
+            updateImage();
+        };
+    }
+}
+
+// Redo function
+function redo() {
+    if (currentIndex < editingHistory.length - 1) {
+        currentIndex++;
+        const imgData = editingHistory[currentIndex];
+        const img = new Image();
+        img.src = imgData;
+        img.onload = () => {
+            currentImage = img;
+            updateImage();
+        };
+    }
+}
+
+// Attach event listeners to Undo and Redo buttons
+const undoButton = document.getElementById("undo");
+const redoButton = document.getElementById("redo");
+
+undoButton.addEventListener("click", undo);
+redoButton.addEventListener("click", redo);
+
+// Save the initial state when an image is loaded
+currentImage.onload = () => {
+    saveState();
+    updateImage();
+};
