@@ -69,15 +69,27 @@ input[type="text"] {
 
 
 
+/* Style the owner image */
+.owner-image {
+    max-width: 200px;
+    margin-top: 20px;
+    border: 5px solid #007BFF;
+}
+
 /* Style the "About the Owner" section */
 .owner-bio {
     font-size: 16px;
+    margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Style the social media buttons */
 .social-links {
     margin-top: 10px;
+    text-align: center;
 }
 
 .social-links a {
