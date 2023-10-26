@@ -170,3 +170,37 @@ currentImage.onload = () => {
     saveState();
     updateImage();
 };
+
+
+
+// Function to download the edited image
+function downloadImage() {
+    const canvas = document.createElement("canvas");
+    canvas.width = currentImage.width;
+    canvas.height = currentImage.height;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(currentImage, 0, 0);
+
+    // Create a download link for the image
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
+    a.download = "edited_image.png";
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Function to share the edited image (sample implementation)
+function shareImage() {
+    const imageUrl = currentImage.src;
+    // Implement sharing logic here, e.g., opening a sharing dialog or copying the URL to the clipboard
+    alert("Share this image: " + imageUrl);
+}
+
+// Attach event listeners to the "Download" and "Share" buttons
+const downloadButton = document.getElementById("download");
+const shareButton = document.getElementById("share");
+
+downloadButton.addEventListener("click", downloadImage);
+shareButton.addEventListener("click", shareImage);
