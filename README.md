@@ -1,6 +1,6 @@
 # Simple Image Editor
 
-![Project Screenshot](Demo.jpg)
+![Project Screenshot](Screenshot_20231026-133702.jpg)
 
 A simple web-based image editor that allows you to adjust the brightness, opacity, blur, contrast, and invert colors of an image. You can also rotate the image and resize it using arrow buttons. This project is hosted on GitHub Pages at [https://shadbalti.github.io/Simple-image-editor/](https://shadbalti.github.io/Simple-image-editor/).
 
