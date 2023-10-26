@@ -96,3 +96,22 @@
 
             return canvas;
         }
+
+
+
+
+
+
+
+// Add a script to apply animations when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the elements to animate
+    const ownerImage = document.querySelector(".owner-image");
+    const ownerBio = document.querySelector(".owner-bio");
+    const socialLinks = document.querySelector(".social-links");
+
+    // Add a class to trigger the animations
+    ownerImage.classList.add("show");
+    ownerBio.classList.add("show");
+    socialLinks.classList.add("show");
+});
