@@ -1,0 +1,68 @@
+
+/* style.css */
+#controls {
+    margin-top: 10px;
+}
+
+#edited-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Example background and color styles */
+body {
+    background-color: #f4f4f4;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Add your custom background and color styles as needed */
+/* Example margin and padding styles */
+#image-container {
+    margin: 10px;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+/* Add margins and padding as per your layout and spacing preferences */
+/* Example border and box shadow styles */
+#edited-image {
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 5px #888;
+}
+
+/* Customize borders and shadows as desired */
+/* Example font and typography styles */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+input[type="text"] {
+    font-size: 14px;
+}
+
+/* Define your preferred fonts and typography styles */
+/* Example button hover effect */
+.btn {
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* Example container styles */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Example media query for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+}

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Image Editor</title>
+    
+    <!-- Add Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Link your custom style.css for additional styling -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Allow users to select a theme -->
+    <select id="theme-selector" class="form-control">
+        <option value="theme-light">Light Theme</option>
+        <option value="theme-dark">Dark Theme</option>
+    </select>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Simple Image Editor</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <input type="file" id="image-input" accept="image/*" class="form-control">
+                <input type="text" id="image-url" placeholder="Enter image URL" class="form-control mt-2">
+                <button id="load-image" class="btn btn-primary mt-2">Load Image</button>
+                <div id="image-container" class="mt-4">
+                    <img id="edited-image" src="" alt="Edited Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="controls">
+                    <label for="brightness">Brightness:</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100" class="form-control">
+                    <br>
+                    <label for="opacity">Opacity:</label>
+                    <input type="range" id="opacity" min="0" max="100" value="100" class="form-control">
+                    <br>
+                    <label for="blur">Blur:</label>
+                    <input type="range" id="blur" min="0" max="10" value="0" class="form-control">
+                    <br>
+                    <label for="contrast">Contrast:</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100" class="form-control">
+                    <br>
+                    <button id="invert" class="btn btn-secondary">Invert Colors</button>
+                    <button id="rotate" class="btn btn-secondary">Rotate 90°</button>
+                    <button id="resize-plus" class="btn btn-secondary">Resize +</button>
+                    <button id="resize-minus" class="btn btn-secondary">Resize -</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Include your JavaScript code here -->
+    <script src= "main.js">
+    </script>
+<script>
+        // Your JavaScript code goes here
+        const themeSelector = document.getElementById("theme-selector");
+        const body = document.body;
+
+        themeSelector.addEventListener("change", () => {
+            const selectedTheme = themeSelector.value;
+            body.className = selectedTheme;
+        });
+    </script>
+</body>
+</html>
