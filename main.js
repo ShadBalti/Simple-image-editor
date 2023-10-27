@@ -204,3 +204,13 @@ const shareButton = document.getElementById("share");
 
 downloadButton.addEventListener("click", downloadImage);
 shareButton.addEventListener("click", shareImage);
+
+
+
+        // JavaScript for dynamic clock
+        function updateClock() {
+            const now = new Date();
+            const timeElement = document.getElementById("clock");
+            timeElement.innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
