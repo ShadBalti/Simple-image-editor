@@ -93,7 +93,7 @@ input[type="text"] {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -108,7 +108,7 @@ input[type="text"] {
 .social-links {
     margin-top: 10px;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -130,17 +130,5 @@ input[type="text"] {
 }
 
 footer{ 
-  color: #fff !important;
+  color: black;
 }
-
-
-
-        /* Custom CSS for animations and font */
-        #owner-section {
-            font-family: 'YourFont', sans-serif;
-            animation: fadeIn 2s;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
