@@ -128,3 +128,16 @@ input[type="text"] {
     background-color: #333;
     color: #fff;
 }
+
+
+
+
+        /* Custom CSS for animations and font */
+        #owner-section {
+            font-family: 'YourFont', sans-serif;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
