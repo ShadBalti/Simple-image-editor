@@ -62,38 +62,6 @@ input[type="text"] {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Example media query for responsiveness */
-@media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-}
-
-
-
-/* Style the owner image */
-.owner-image {
-    max-width: 200px;
-    margin-top: 20px;
-    border: 5px solid #007BFF;
-}
-
-
-/* Style the "About the Owner" section */
-.owner-bio {
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Style the social media buttons */
-.social-links {
-    margin-top: 10px;
-    text-align: center;
-    
-}
 
 
 /* Style the selected theme */
@@ -107,5 +75,5 @@ input[type="text"] {
 }
 
 footer{ 
-  color: black;
+  color: #000;
 }
