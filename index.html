@@ -70,7 +70,46 @@
   
 </div>
 
-
+    <footer id="owner-section" class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="owner-image.jpg" alt="Owner's Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h4>Dilshad Hussain</h4>
+                    <p>Contact Information:</p>
+                    <p><i class="bi bi-telephone"></i> Phone: 03408452974</p>
+                    <p><i class="bi bi-envelope"></i> Email: owner@email.com</p>
+                    <p>Physical Address: Barah Khaplu, Skardu, Pakistan</p>
+                    <p id="clock"></p> <!-- Dynamic clock -->
+                    <div class="social-feed mt-3">
+                        <!-- Social media feed (use appropriate embed code or widget) -->
+                        <!-- Example Twitter embed code -->
+                        <a class="twitter-timeline" data-height="200" href="https://twitter.com/ShadBalti" data-tweet-limit="3">Tweets by YourPage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5>About Us</h5>
+                    <p>Brief biography or description of the owner or company.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <form action="submit_message.php" method="POST"> <!-- Replace with your form action -->
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- Add Bootstrap JS via CDN -->
