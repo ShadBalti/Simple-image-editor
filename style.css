@@ -75,6 +75,7 @@ input[type="text"] {
 }
 
 footer{ 
+  height: 30vh;
   color: #000;
   position: fixed;
   bottom: 0;
