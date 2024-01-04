@@ -27,22 +27,6 @@ To get started contributing to the Simple Image Editor project, please follow th
 8. Push the new branch to your forked repository.
 9. Create a pull request to merge your changes into the main repository.
 
-## Code style guidelines
-
-The Simple Image Editor project follows the Google Java Style Guide: https://google.github.io/styleguide/javaguide.html. Please make sure that your code follows these guidelines when submitting a pull request.
-
-## Testing guidelines
-
-The Simple Image Editor project uses JUnit for unit testing. Please write unit tests for any new code that you add.
-
-## Documentation guidelines
-
-The Simple Image Editor project uses Sphinx to generate the documentation. Please make sure that your documentation is well-written and easy to understand.
-
-## Translation guidelines
-
-The Simple Image Editor project uses Crowdin to manage translations. If you would like to translate the app into a new language, please create a new project on Crowdin and follow the instructions on the Crowdin website.
-
 ## Questions?
 
 If you have any questions about contributing to the Simple Image Editor project, please feel free to ask. You can create a new issue on GitHub or send an email to the project maintainers.
