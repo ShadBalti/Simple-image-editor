@@ -99,7 +99,7 @@
 
 
 // Add a script to apply animations when the page loads
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("load", function () {
     // Get the elements to animate
     const ownerImage = document.querySelector(".owner-image");
     const ownerBio = document.querySelector(".owner-bio");
